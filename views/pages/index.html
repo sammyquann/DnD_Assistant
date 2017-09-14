@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+
+    <link rel="stylesheet" href="../../style/main.css">
+
+  </head>
+
+  <body ng-app="mainApp" ng-controller="mainCtrl">
+
+      <!-- DnD Assistant Header -->
+      <section class="hero is-primary">
+          <div class="hero-body">
+              <div class="container">
+                  <h1 class="title">DnD Assistant</h1>
+                  <h3 class="subtitle">Brought to you by <strong>Samstequa</strong></h3>
+              </div>
+          </div>
+      </section>
+
+      <!-- Navbar -->
+      <section class="Samstequa-navbar">
+          <div class="container">
+              <nav class="navbar Samstequa-navbar">
+
+                  <div class="navbar-brand">
+                      <a id="navbar-home" class="navbar-item" ng-click="navigate('home.html')">
+                          <img src="../../images/google-plus-icon-24x.png">
+                          DnD Assistant
+                      </a>
+                  </div>
+
+                  <div class="navbar-menu is-active">
+                      <div class="navbar-start">
+
+                          <a id="navbar-characters" class="navbar-item" ng-click="navigate('characters.html')">
+                              Player Characters
+                          </a>
+
+                          <a id="navbar-monsters" class="navbar-item" ng-click="navigate('monsters.html')">
+                              Monsters
+                          </a>
+
+                          <a id="navbar-npcs" class="navbar-item">
+                              NPCs
+                          </a>
+
+                          <a id="navbar-locations" class="navbar-item">
+                              Locations
+                          </a>
+
+                          <a id="navbar-spells" class="navbar-item">
+                              Spells
+                          </a>
+
+                      </div>
+
+                      <div class="navbar-end">
+                          <a class="navbar-item">Link3</a>
+                      </div>
+
+                  </div>
+              </nav>
+          </div>
+      </section>
+
+      <!-- Current Page Content -->
+      <section>
+          <div class="container">
+              <div id="current-page-view">
+                  <div ng-include="contentFile"></div>
+              </div>
+          </div>
+      </section>
+
+      <script src="../../node_modules/angular/angular.js"></script>
+
+
+
+      <script src="../../scripts/navigation.js"></script>
+      <script src="../../scripts/index.js"></script>
+
+      <script src="../../scripts/controllers/monsterController.js"></script>
+  </body>
+</html>

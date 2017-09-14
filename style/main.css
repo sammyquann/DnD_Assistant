@@ -1,3 +1,13 @@
-.hero-header {
-    background-color: #CCCCCC;
+.Samstequa-navbar {
+    background-color    : #DDDDDD;
+}
+
+.full-width {
+    width   : 100%;
+}
+
+.table-header {
+    cursor          : pointer;
+    background-color: #DDDDDD;
+    border-style    : groove !important;
 }

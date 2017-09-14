@@ -1,0 +1,59 @@
+<section>
+    <div class="notification is-danger">
+
+        <h1 class="title">Monsters</h1>
+
+        <div class="field">
+
+            <p class="control is-expanded">
+                <label class="label">Name</label>
+                <input class="input" type="text" placeholder="Monster Name">
+            </p>
+        </div>
+
+        <div class="field-body">
+            <div class="field has-addons">
+
+                <p class="control is-expanded">
+                    <label class="label">Name</label>
+                    <input class="input" type="text" placeholder="Monster Name">
+                </p>
+            </div>
+
+            <div class="field has-addons">
+
+                <p class="control is-expanded">
+                    <label class="label">Name</label>
+                    <input class="input" type="text" placeholder="Monster Name">
+                </p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <button id="load-table-btn" class="button is-info" ng-click="loadMonsters()">Load Table</button>
+
+        <table class="table is-fullwidth is-bordered is-striped">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('name')" class="table-header"><i class="fa fa-sort"></i> Name</th>
+                    <th ng-click="sortTable('type')" class="table-header"><i class="fa fa-sort"></i> Type</th>
+                    <th ng-click="sortTable('challenge_rating')" class="table-header"><i class="fa fa-sort"></i><abbr title="Challenge Rating"> CR</abbr></th>
+                    <th ng-click="sortTable('hit_points')" class="table-header"><i class="fa fa-sort"></i><abbr title="Hit Points"> HP</th>
+                    <th ng-click="sortTable('armor_class')" class="table-header"><i class="fa fa-sort"></i><abbr title="Armor Class"> AC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="monster in monsterList">
+                    <td>{{ monster.name }}</td>
+                    <td>{{ monster.type }}</td>
+                    <td>{{ monster.challenge_rating }}</td>
+                    <td>{{ monster.hit_points }}</td>
+                    <td>{{ monster.armor_class }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</section>
