@@ -11,3 +11,75 @@
     background-color: #DDDDDD;
     border-style    : groove !important;
 }
+
+.monster-header {
+    border-bottom   : solid 2px #FFFFFF;
+    padding-bottom  : 10px;
+    margin-bottom   : 10px;
+    font-size       : 50px;
+}
+
+.monster-action-container {
+    border-top      : solid 1px #FFFFFF;
+    padding         : 10px 0px;
+}
+
+.monster-action {
+    border          : solid 2px #DDDDDD;
+}
+
+.unit-data {
+    background-color: #CCCCCC;
+    color           : #000000;
+}
+
+.action-cell {
+    border          : solid 1px #BBBBBB;
+    padding         : 10px;
+}
+
+.monster-action-name {
+    font-size       : 20px;
+}
+
+.attribute {
+    text-align      : center;
+}
+
+.attribute-divider {
+    border-left     : solid 1px #DDDDDD;
+}
+
+.has-tabs {
+    padding-top      : 0px !important;
+}
+.tab-container {
+    padding         : 0rem 1.5rem;
+    margin-bottom   : 0rem !important;
+    margin-top      : 1.5rem;
+}
+.tab-column {
+    margin          : 0px;
+    padding         : 0px;
+}
+.tab-button {
+    width           : 100%;
+    padding         : 10px;
+    height          : auto;
+}
+
+.w5 {
+    width           : 5%;
+}
+.w15 {
+    width           : 15%;
+}
+.w20 {
+    width           : 20%;
+}
+.w50 {
+    width           : 50%;
+}
+.w65 {
+    width           : 65%;
+}

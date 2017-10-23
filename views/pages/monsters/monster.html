@@ -1,0 +1,116 @@
+
+<h1 class="monster-header">{{ monster.name }}</h1>
+
+<div class="tile is-ancestor">
+
+    <div class="tile is-vertical">
+
+            <div class="tile is-parent">
+
+                <div class="tile is-child notification unit-data">
+                    <div class="columns">
+                        <div class="column attribute">
+                            <div class="title">STR</div>
+                            <div class="subtitle">{{ monster.strength }} ({{ modiferOf(monster.strength) }})</div>
+                        </div>
+                        <div class="column attribute attribute-divider">
+                            <div class="title">DEX</div>
+                            <div class="subtitle">{{ monster.dexterity }} ({{ modiferOf(monster.dexterity) }})</div>
+                        </div>
+                        <div class="column attribute attribute-divider">
+                            <div class="title">CON</div>
+                            <div class="subtitle">{{ monster.constitution }} ({{ modiferOf(monster.constitution) }})</div>
+                        </div>
+                        <div class="column attribute attribute-divider">
+                            <div class="title">INT</div>
+                            <div class="subtitle">{{ monster.intelligence }} ({{ modiferOf(monster.intelligence) }})</div>
+                        </div>
+                        <div class="column attribute attribute-divider">
+                            <div class="title">WIS</div>
+                            <div class="subtitle">{{ monster.wisdom }} ({{ modiferOf(monster.wisdom) }})</div>
+                        </div>
+                        <div class="column attribute attribute-divider">
+                            <div class="title">CHA</div>
+                            <div class="subtitle">{{ monster.charisma }} ({{ modiferOf(monster.charisma) }})</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tile is-parent is-4">
+
+                <div class="tile is-child notification is-primary">
+                    <p class="title"> Title 2 </p>
+                    <p class="subtitle"> test tile #2 </p>
+                </div>
+
+                <div class="tile is-child notification is-warning">
+                    <p class="title"> Title 2 </p>
+                    <p class="subtitle"> test tile #2 </p>
+                </div>
+
+            </div>
+
+            <div class="columns tab-container">
+                <div class="column tab-column">
+                    <button class="button tab-button"><span class="subtitle">Actions</span></button>
+                </div>
+                <div class="column tab-column">
+                    <button class="button tab-button"><span class="subtitle">Abilities</span></button>
+                </div>
+            </div>
+
+            <div class="tile is-parent has-tabs">
+                <div class="tile is-child notification unit-data">
+
+                    <div class="title">Actions</div>
+
+                    <ul>
+                        <li ng-repeat="action in monster.actions">
+
+                            <table class="table is-bordered is-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header w20">Action Name</th>
+                                        <th class="table-header w65">Description</th>
+                                        <th class="table-header w5">Attack Bonus</th>
+                                        <th class="table-header w5">Damage</th>
+                                        <th class="table-header w5">Damage Bonus</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ action.name.toUpperCase() }}</td>
+                                        <td>{{ action.desc }}</td>
+                                        <td>{{ action.attack_bonus }}</td>
+                                        <td>{{ action.damage_dice }}</td>
+                                        <td>{{ action.damage_bonus }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- <div class="columns monster-action">
+                                <div class="column monster-action-name action-cell">
+                                    {{ ability.name.toUpperCase() }}
+                                </div>
+                                <div ng-show="ability.attack_bonus" class="column action-cell">
+                                    Attack Bonus: {{ ability.attack_bonus }}
+                                </div>
+                                <div ng-show="ability.damage_dice" class="column action-cell">
+                                    Damage Dice: {{ ability.damage_dice }}
+                                </div>
+                                <div ng-show="ability.damage_bonus" class="column action-cell">
+                                    Damgage Bonus: {{ ability.damage_bonus }}
+                                </div>
+                            </div>
+                            <article>{{ ability.desc }}</article> -->
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+    </div>
+
+</div>

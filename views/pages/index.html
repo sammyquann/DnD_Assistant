@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>DnD Assistant</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
@@ -12,7 +12,7 @@
 
   </head>
 
-  <body ng-app="mainApp" ng-controller="mainCtrl">
+  <body ng-app="mainApp" ng-controller="mainController">
 
       <!-- DnD Assistant Header -->
       <section class="hero is-primary">
@@ -43,7 +43,7 @@
                               Player Characters
                           </a>
 
-                          <a id="navbar-monsters" class="navbar-item" ng-click="navigate('monsters.html')">
+                          <a id="navbar-monsters" class="navbar-item" ng-click="navigate('monsters/monsterContainer.html')">
                               Monsters
                           </a>
 
@@ -81,11 +81,8 @@
 
       <script src="../../node_modules/angular/angular.js"></script>
 
-
-
-      <script src="../../scripts/navigation.js"></script>
       <script src="../../scripts/index.js"></script>
+      <script src="../../scripts/app.js"></script>
 
-      <script src="../../scripts/controllers/monsterController.js"></script>
   </body>
 </html>
